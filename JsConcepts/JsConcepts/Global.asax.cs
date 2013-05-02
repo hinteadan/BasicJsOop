@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ModelStore;
 
 namespace JsConcepts
 {
@@ -14,6 +15,8 @@ namespace JsConcepts
     {
         protected void Application_Start()
         {
+            Application.Add("Store", new InMemoryStore());
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
