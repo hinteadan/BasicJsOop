@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsConcepts", "JsConcepts\Js
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{EEE3BE9D-46D3-4926-BB3A-A763D7D64E2C}"
 	ProjectSection(SolutionItems) = preProject
-		README.TXT = README.TXT
+		..\README = ..\README
 	EndProjectSection
 EndProject
 Global
