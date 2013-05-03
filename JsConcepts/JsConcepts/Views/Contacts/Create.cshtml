@@ -1,0 +1,53 @@
+﻿@model Model.Contact
+@{
+    ViewBag.Title = "Create Contact";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<h2>Create Contact</h2>
+
+@{Html.BeginForm();}
+
+<ul class="noMark">
+    <li>
+        <label>
+            First Name: 
+            @Html.TextBoxFor(m => m.FirstName)
+        </label>
+    </li>
+    <li>
+        <label>
+            Last Name: 
+            @Html.TextBoxFor(m => m.LastName)
+        </label>
+    </li>
+    <li>
+        <label>
+            Company: 
+            @Html.TextBoxFor(m => m.Company)
+        </label>
+    </li>
+    <li>
+        <label>
+            Phone: 
+            @Html.TextBoxFor(m => m.PhoneNumber)
+        </label>
+    </li>
+    <li>
+        <label>
+            Email: 
+            @Html.TextBoxFor(m => m.EmailAddress)
+        </label>
+    </li>
+    <li>
+        <label>
+            Address: 
+            @Html.TextAreaFor(m => m.HomeAddress)
+        </label>
+    </li>
+    <li>
+        <button type="submit">Save</button>
+    </li>
+</ul>
+
+@{Html.EndForm();}

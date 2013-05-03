@@ -10,15 +10,15 @@ namespace Model
     {
         public Guid Id { get; private set; }
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Company { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Company { get; set; }
 
-        public string PhoneNumber { get; private set; }
-        public string EmailAddress { get; private set; }
-        public string HomeAddress { get; private set; }
+        public string PhoneNumber { get; set; }
+        public string EmailAddress { get; set; }
+        public string HomeAddress { get; set; }
 
-        private Contact()
+        public Contact()
         {
             this.Id = Guid.NewGuid();
         }

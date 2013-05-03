@@ -14,5 +14,17 @@ namespace JsConcepts.Controllers
         {
             return View(Store.FetchAll<Contact>().AsContactBriefInfo());
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Contact contact)
+        {
+            Store.Store<Contact>(contact);
+            return RedirectToAction("Index");
+        }
     }
 }

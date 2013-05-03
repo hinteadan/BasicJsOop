@@ -1,0 +1,7 @@
+﻿td, th {
+    border: solid 1px #000;
+}
+
+ul.noMark {
+    list-style-type: none;
+}
