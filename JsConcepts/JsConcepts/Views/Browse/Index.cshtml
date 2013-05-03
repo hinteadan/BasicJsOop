@@ -1,0 +1,16 @@
+﻿@using Model.Projections
+@model IEnumerable<ContactBriefInfo>
+@{
+    ViewBag.Title = "Browse Contacts";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<h2>Browse Contacts</h2>
+
+@foreach (ContactBriefInfo contact in Model)
+{
+    <div class="card">
+        <h4>@contact.FirstName @contact.LastName</h4>
+        <h6>@(contact.Company ?? "-")</h6>
+    </div>
+}
