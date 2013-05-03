@@ -51,6 +51,11 @@ namespace ModelStore
             return store.Select(d => (T)d.Value).ToArray();
         }
 
+        public void Remove(Guid id)
+        {
+            store.Remove(id);
+        }
+
         private void CheckNull(IAmModel modelObject)
         {
             if (modelObject == null || modelObject.Id == Guid.Empty)

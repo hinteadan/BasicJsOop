@@ -39,8 +39,9 @@
                 @contact.Company
             </td>
             <td>
-                <button>Edit</button>
-                <button>Delete</button>
+                @Html.ActionLink("Edit", "Edit", "Contacts", new { id = contact.Id }, new { })
+                |
+                @Html.ActionLink("Delete", "Delete", "Contacts", new { id = contact.Id }, new { })
             </td>
         </tr>
     }

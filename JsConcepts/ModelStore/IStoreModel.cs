@@ -14,5 +14,6 @@ namespace ModelStore
         T Fetch<T>(Func<T, bool> predicate) where T : IAmModel;
         IEnumerable<T> FetchMany<T>(Func<T, bool> predicate) where T : IAmModel;
         IEnumerable<T> FetchAll<T>() where T : IAmModel;
+        void Remove(Guid id);
     }
 }

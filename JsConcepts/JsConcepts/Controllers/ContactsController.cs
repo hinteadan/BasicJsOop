@@ -26,5 +26,23 @@ namespace JsConcepts.Controllers
             Store.Store<Contact>(contact);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Edit(Guid id)
+        {
+            return View(Store.Fetch<Contact>(id));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Contact contact)
+        {
+            Store.Store<Contact>(contact);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(Guid id)
+        {
+            Store.Remove(id);
+            return RedirectToAction("Index");
+        }
     }
 }
